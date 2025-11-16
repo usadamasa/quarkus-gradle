@@ -1,0 +1,32 @@
+name: ci.yml
+on: push
+
+jobs:
+  # This job is used to fail the workflow if any of the previous jobs fail.
+  # https://zenn.dev/shunsuke_suzuki/articles/how-to-manage-github-actions-required-status-check
+  ci-status-check:
+    runs-on: ubuntu-slim
+    if: failure()
+    timeout-minutes: 10
+    permissions: {}
+    needs:
+      - build
+    steps:
+      - run: exit 1
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 21
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v5
+
+      - name: Build with Gradle
+        run: ./gradlew build
