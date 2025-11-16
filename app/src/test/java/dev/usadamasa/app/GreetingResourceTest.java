@@ -1,4 +1,4 @@
-package dev.usadamasa;
+package dev.usadamasa.app;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
@@ -14,7 +14,6 @@ class GreetingResourceTest {
                 .when().get("/hello")
                 .then()
                 .statusCode(200)
-                .body(is("Hello from Quarkus REST with Gradle!"));
+                .body(is("Hello from Quarkus REST with Gradle! And Hello from Lib!"));
     }
-
 }

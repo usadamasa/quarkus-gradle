@@ -1,5 +1,6 @@
 package dev.usadamasa;
 
+import dev.usadamasa.app.GreetingResourceTest;
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 
 @QuarkusIntegrationTest
