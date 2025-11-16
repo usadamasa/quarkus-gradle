@@ -7,7 +7,6 @@ extends: default
 
 ignore-from-file:
   - .gitignore
-  - semantic-layer/.yamlignore
 
 rules:
   line-length: disable
