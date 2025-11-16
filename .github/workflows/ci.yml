@@ -15,6 +15,10 @@ jobs:
       - run: exit 1
 
   build:
+    uses: ./.github/workflows/sub/build.yml
+    secrets: inherit
+
+  build_before:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
