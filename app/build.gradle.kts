@@ -11,4 +11,6 @@ dependencies {
     implementation("io.quarkus:quarkus-rest")
     implementation("io.quarkus:quarkus-rest-jackson")
     implementation("io.quarkus:quarkus-arc")
+
+    implementation(projects.lib)
 }

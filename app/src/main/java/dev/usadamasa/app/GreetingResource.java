@@ -1,5 +1,6 @@
-package dev.usadamasa;
+package dev.usadamasa.app;
 
+import dev.usadamasa.lib.Lib;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
@@ -11,6 +12,8 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "Hello from Quarkus REST with Gradle!";
+        Lib lib = new Lib();
+        var message = "Hello from Quarkus REST with Gradle! And " + lib.getMessage();
+        return message;
     }
 }
