@@ -1,5 +1,5 @@
 name: ci.yml
-on: push
+"on": push
 
 jobs:
   # This job is used to fail the workflow if any of the previous jobs fail.
@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-slim
     if: failure()
     timeout-minutes: 10
-    permissions: {}
+    permissions: { }
     needs:
       - build
     steps:
