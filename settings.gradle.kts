@@ -13,3 +13,5 @@ pluginManagement {
 rootProject.name="quarkus-gradle"
 
 include(":app")
+
+includeBuild("build-logic")
