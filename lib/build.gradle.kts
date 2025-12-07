@@ -5,4 +5,6 @@ plugins {
 group = "org.usadamasa"
 version = "unspecified"
 
-dependencies {}
+dependencies {
+//    testFixturesImplementation(projects.lib)
+}

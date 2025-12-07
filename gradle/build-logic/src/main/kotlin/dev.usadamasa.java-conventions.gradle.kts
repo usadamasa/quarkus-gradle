@@ -1,5 +1,6 @@
 plugins {
     java
+    `java-test-fixtures`
 }
 
 repositories {
