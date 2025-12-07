@@ -1,6 +1,7 @@
 plugins {
     id("io.quarkus")
 
+    id("dev.usadamasa.java-conventions")
     id("dev.usadamasa.quarkus-conventions")
 }
 
@@ -13,4 +14,6 @@ dependencies {
     implementation("io.quarkus:quarkus-arc")
 
     implementation(projects.lib)
+
+    testImplementation(testFixtures(projects.lib))
 }
