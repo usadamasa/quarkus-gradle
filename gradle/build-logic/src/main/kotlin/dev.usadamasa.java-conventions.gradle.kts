@@ -14,9 +14,14 @@ java {
 }
 
 dependencies {
+    implementation("org.jspecify:jspecify:1.0.0")
+
+    testImplementation("org.jspecify:jspecify:1.0.0")
+    testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation(platform("org.junit:junit-bom:6.0.1"))
 
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    testFixturesImplementation("org.jspecify:jspecify:1.0.0")
+
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 

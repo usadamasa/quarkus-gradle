@@ -6,5 +6,5 @@ group = "org.usadamasa"
 version = "unspecified"
 
 dependencies {
-//    testFixturesImplementation(projects.lib)
+//    implementation("org.jspecify:jspecify:1.0.0")
 }
